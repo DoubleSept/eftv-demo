@@ -1,0 +1,3 @@
+[submodule "eftv-core"]
+	path = eftv-core
+	url = git@github.com:DoubleSept/eftv-core.git
