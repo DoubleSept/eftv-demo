@@ -32,8 +32,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Escape From The Void"
-run/main_scene="res://eftv-core/scenes/menus/menuMain.tscn"
+config/name="Escape From The Void - Demo"
+run/main_scene="res://eftv-core/scenes/menus/menuMainTelemetry.tscn"
 boot_splash/image="res://splash.png"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0.247059, 0.247059, 0.247059, 1 )
