@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://eftv-core/assets/fonts/menuFont_headset.tres" type="DynamicFont" id=1]
+[ext_resource path="res://eftv-core/scripts/emitFall.gd" type="Script" id=2]
+[ext_resource path="res://eftv-core/player/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://eftv-core/elements/environments/environment-bluesky.tscn" type="PackedScene" id=5]
+[ext_resource path="res://eftv-core/elements/sphere/sphereNextLevel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://eftv-core/elements/camera/orthogonalCamera.tscn" type="PackedScene" id=7]
+[ext_resource path="res://eftv-core/elements/blocks/immobile.tscn" type="PackedScene" id=8]
+
+[node name="scene0" type="Spatial"]
+script = ExtResource( 2 )
+
+[node name="orthogonalCamera" parent="." instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0.206, 65.563, -15 )
+cull_mask = 3
+current = false
+
+[node name="WorldEnvironment" parent="." instance=ExtResource( 5 )]
+
+[node name="sphereNextLevel" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, 0, 16, -24 )
+
+[node name="player" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.189, 10 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.120731, -0.975183, 0.185588, 0.592123, 0.0793101, 0.801935, -0.796752, 0.206709, 0.567853, -0.361305, 26.6215, -5 )
+light_energy = 0.01
+light_indirect_energy = 0.2
+light_specular = 0.2
+light_cull_mask = 4294967293
+shadow_enabled = true
+shadow_color = Color( 0.196078, 0.196078, 0.196078, 1 )
+
+[node name="immobile" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 1.3, 0, 12, 7.4 )
+
+[node name="immobile2" parent="." instance=ExtResource( 8 )]
+transform = Transform( 2.5, 0, 0, 0, 1, 0, 0, 0, 2.5, 0, 12, -23 )
+
+[node name="OnScreenContainer" type="MarginContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelJoystick" type="Label" parent="OnScreenContainer"]
+margin_right = 902.0
+margin_bottom = 118.0
+custom_fonts/font = ExtResource( 1 )
+text = "TEXT_DEMO_CONGRATS"
+align = 1
+
+[connection signal="player_fall" from="player" to="." method="_on_player_player_fall"]
+
+[editable path="player"]

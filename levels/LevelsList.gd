@@ -4,6 +4,9 @@ const LIST = [
 	"demo"
 ]
 
+const DEMO_RUN = null
+
+const URL_TELEMETRY = 'https://eftv.doublesept.fr/'
 const FROM_VERSION_1 = "demo"
 
-const URL_TELEMETRY = "http://localhost/"
+const TAGLINE = "Demo Version"

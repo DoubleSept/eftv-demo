@@ -12,28 +12,34 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "ArrayUtils",
 "language": "GDScript",
-"path": "res://eftv-core/addons/SIsilicon.3d.text/array_utils.gd"
+"path": "res://addons/SIsilicon.3d.text/array_utils.gd"
 }, {
 "base": "ARVRController",
-"class": "EFTV_Controller",
+"class": "EFTV_ControllerOLD",
 "language": "GDScript",
-"path": "res://eftv-core/VR/scripts/VR_Controller.gd"
+"path": "res://eftv-core/player/scripts/VR_Controller_OLD.gd"
 }, {
-"base": "ARVROrigin",
-"class": "PlayerOrigin",
+"base": "KinematicBody",
+"class": "EftvPlayer",
 "language": "GDScript",
-"path": "res://eftv-core/VR/VROrigin.gd"
+"path": "res://eftv-core/player/scripts/Player.gd"
+}, {
+"base": "Node",
+"class": "RunInfos",
+"language": "GDScript",
+"path": "res://eftv-core/scripts/classes/RunInfos.gd"
 } ]
 _global_script_class_icons={
 "ArrayUtils": "",
-"EFTV_Controller": "",
-"PlayerOrigin": ""
+"EFTV_ControllerOLD": "",
+"EftvPlayer": "",
+"RunInfos": ""
 }
 
 [application]
 
 config/name="Escape From The Void - Demo"
-run/main_scene="res://eftv-core/scenes/menus/menuMainTelemetry.tscn"
+run/main_scene="res://eftv-core/scenes/menus/intro/DoubleSeptIntro.tscn"
 boot_splash/image="res://splash.png"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0.247059, 0.247059, 0.247059, 1 )
@@ -41,6 +47,7 @@ config/icon="res://eftv-core/icon.png"
 
 [autoload]
 
+Constants="*res://eftv-core/scripts/system/Constants.gd"
 LevelsList="*res://levels/LevelsList.gd"
 SaveSystem="*res://eftv-core/scripts/system/SaveSystem.gd"
 LevelSystem="*res://eftv-core/scripts/system/LevelsSystem.gd"
@@ -52,10 +59,10 @@ window/size/width=1920
 window/size/height=1080
 window/size/resizable=false
 window/size/fullscreen=true
-window/size/test_width=1280
-window/size/test_height=720
+window/size/test_width=1920
+window/size/test_height=1080
 window/dpi/allow_hidpi=true
-window/stretch/mode="viewport"
+window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
 [editor_plugins]
@@ -64,7 +71,7 @@ enabled=PoolStringArray(  )
 
 [gdnative]
 
-singletons=[ "res://eftv-core/addons/godot-openvr/godot_openvr.gdnlib" ]
+singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib" ]
 
 [input]
 
@@ -156,7 +163,7 @@ switch_player={
 
 [locale]
 
-translations=PoolStringArray(  )
+translations=PoolStringArray( "res://eftv-core/assets/translations/translation.en.translation", "res://eftv-core/assets/translations/translation.es.translation", "res://eftv-core/assets/translations/translation.fr.translation" )
 
 [physics]
 
@@ -168,13 +175,12 @@ shadow_filter=3
 
 [rendering]
 
-quality/filters/anisotropic_filter_level=10
 quality/shadow_atlas/quadrant_0_subdiv=0
 quality/shadow_atlas/quadrant_1_subdiv=0
 quality/shadow_atlas/quadrant_2_subdiv=0
 quality/shadow_atlas/quadrant_3_subdiv=0
 quality/shadows/filter_mode=2
+quality/filters/anisotropic_filter_level=10
 quality/subsurface_scattering/scale=2
-quality/voxel_cone_tracing/high_quality=false
 quality/filters/msaa=4
 quality/depth/hdr=false

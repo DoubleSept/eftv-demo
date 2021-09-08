@@ -10,7 +10,7 @@
 [ext_resource path="res://eftv-core/assets/textures/metal/Metal29_rgh.jpg" type="Texture" id=8]
 [ext_resource path="res://eftv-core/assets/sounds/deny_sound.wav" type="AudioStream" id=9]
 [ext_resource path="res://eftv-core/elements/blocks/normal-sizeM.tscn" type="PackedScene" id=10]
-[ext_resource path="res://eftv-core/elements/player.tscn" type="PackedScene" id=11]
+[ext_resource path="res://eftv-core/player/Player.tscn" type="PackedScene" id=11]
 [ext_resource path="res://eftv-core/elements/blocks/immobile.tscn" type="PackedScene" id=12]
 [ext_resource path="res://eftv-core/elements/sphere/sphereNextLevel.tscn" type="PackedScene" id=13]
 
