@@ -67,7 +67,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PoolStringArray( "res://addons/SIsilicon.3d.text/plugin.cfg", "res://addons/godot-openvr/plugin.cfg" )
 
 [gdnative]
 
