@@ -1,14 +1,14 @@
 extends "res://levels/LevelGroup.gd"
 
-func getTitle(): 
+func getTitle():
 	return "The Demo"
-	
+
 func getLevelList():
 	return [
 	"scene-00-target-move.tscn",
 	"scene-00bis-target-jump.tscn",
 	"scene-01-move.tscn",
-	
+
 	"02-blocs_colores.tscn",
 	"04-transparent-simple.tscn",
 	"05-transparent-marguerite.tscn",
