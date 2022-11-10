@@ -4,7 +4,7 @@
 [ext_resource path="res://eftv-core/elements/environments/environment-bluesky.tscn" type="PackedScene" id=2]
 [ext_resource path="res://eftv-core/elements/sphere/sphereNextLevel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://eftv-core/player/Player.tscn" type="PackedScene" id=5]
-[ext_resource path="res://eftv-core/elements/blocks/immobile.tscn" type="PackedScene" id=6]
+[ext_resource path="res://eftv-core/elements/blocks/Immobile.tscn" type="PackedScene" id=6]
 [ext_resource path="res://eftv-core/scripts/emitFall.gd" type="Script" id=7]
 [ext_resource path="res://eftv-core/assets/fonts/menuFont_headset.tres" type="DynamicFont" id=8]
 
@@ -12,6 +12,11 @@
 script = ExtResource( 7 )
 
 [node name="orthogonalCamera" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0.206, 65.563, -5 )
+cull_mask = 3
+current = false
+
+[node name="orthogonalCamera" parent="orthogonalCamera" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0.206, 65.563, -5 )
 cull_mask = 3
 current = false
@@ -40,8 +45,8 @@ __meta__ = {
 }
 
 [node name="LabelTrigger" type="Label" parent="OnScreenContainer"]
-margin_right = 550.0
-margin_bottom = 118.0
+margin_right = 406.0
+margin_bottom = 96.0
 custom_fonts/font = ExtResource( 8 )
 text = "TEXT_TRIGGER"
 align = 1

@@ -5,7 +5,7 @@
 [ext_resource path="res://eftv-core/scripts/ortho/levelSpecific/autoScroll.gd" type="Script" id=3]
 [ext_resource path="res://eftv-core/elements/environments/environment-bluesky.tscn" type="PackedScene" id=4]
 [ext_resource path="res://eftv-core/elements/sphere/sphereNextLevel.tscn" type="PackedScene" id=5]
-[ext_resource path="res://eftv-core/elements/blocks/immobile.tscn" type="PackedScene" id=6]
+[ext_resource path="res://eftv-core/elements/blocks/Immobile.tscn" type="PackedScene" id=6]
 [ext_resource path="res://eftv-core/player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://eftv-core/elements/blocks/moveOnce-sizeM.tscn" type="PackedScene" id=8]
 
@@ -47,50 +47,35 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.189, -1.449 )
 
 [node name="movableOnce" parent="platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43, 0, -23 )
-max_speed = 20
 
 [node name="movableOnce2" parent="platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -53 )
-max_speed = 20
 
 [node name="movableOnce3" parent="platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -71 )
-max_speed = 20
 
 [node name="movableOnce4" parent="platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26, 0, -84 )
-max_speed = 20
 
 [node name="movableOnce5" parent="platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -44, 0, -101 )
-max_speed = 20
 
 [node name="movableOnce6" parent="platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61, 0, -134 )
-max_speed = 20
 
 [node name="movableOnce7" parent="platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -124 )
-max_speed = 20
 
 [node name="movableOnce8" parent="platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33, 0, -159 )
-max_speed = 20
 
 [node name="movableOnce9" parent="platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33, 0, -198 )
-max_speed = 20
-
-[node name="movableOnce12" parent="platforms" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47, 0, -186 )
-max_speed = 20
 
 [node name="movableOnce11" parent="platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0, -166 )
-max_speed = 20
 
 [node name="movableOnce10" parent="platforms" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, -204 )
-max_speed = 20
 
 [connection signal="player_fall" from="mainPoints/player" to="." method="_on_player_player_fall"]

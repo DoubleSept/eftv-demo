@@ -6,7 +6,7 @@
 [ext_resource path="res://eftv-core/scripts/ortho/CameraLight.gd" type="Script" id=4]
 [ext_resource path="res://eftv-core/elements/level/cursorLight.tscn" type="PackedScene" id=5]
 [ext_resource path="res://eftv-core/elements/sphere/sphereNextLevel.tscn" type="PackedScene" id=6]
-[ext_resource path="res://eftv-core/elements/blocks/immobile.tscn" type="PackedScene" id=7]
+[ext_resource path="res://eftv-core/elements/blocks/Immobile.tscn" type="PackedScene" id=7]
 [ext_resource path="res://eftv-core/player/Player.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ProceduralSky" id=1]
@@ -49,6 +49,11 @@ omni_range = 7.0
 
 [node name="immobile2" parent="fixe/sphereNextLevel" instance=ExtResource( 7 )]
 transform = Transform( 0.800001, 0, 0, 0, 1, 0, 0, 0, 0.800001, 0.004, -4.058, 0 )
+is_dark = true
+
+[node name="cursorLight" parent="fixe/sphereNextLevel" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 25, 0 )
+light_color = Color( 1, 1, 1, 1 )
 
 [node name="player" parent="fixe" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.189, 0 )
@@ -61,17 +66,21 @@ spot_angle_attenuation = 0.366022
 
 [node name="immobile" parent="fixe" instance=ExtResource( 7 )]
 transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, 12, 0 )
+is_dark = true
 
 [node name="platforms" type="Spatial" parent="."]
 
 [node name="immobile" parent="platforms" instance=ExtResource( 7 )]
 transform = Transform( 2.5, 0, 0, 0, 1, 0, 0, 0, 0.8, -26.4, 12, 0 )
+is_dark = true
 
 [node name="immobile2" parent="platforms" instance=ExtResource( 7 )]
 transform = Transform( -1.31134e-07, 0, 0.8, 0, 1, 0, -3, 0, -3.49691e-08, -40, 12, -30 )
+is_dark = true
 
 [node name="immobile3" parent="platforms" instance=ExtResource( 7 )]
 transform = Transform( -3.6, 0, -1.20797e-07, 0, 1, 0, 5.43585e-07, 0, -0.8, 0, 12, -47.6 )
+is_dark = true
 
 [node name="EditorLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.965926, 0.183013, -0.183013, 0, 0.707107, 0.707107, 0.258819, -0.683013, 0.683013, 0, 0, 0 )

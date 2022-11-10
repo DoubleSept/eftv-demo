@@ -1,7 +1,7 @@
 extends Node
 
-func getTitle(): 
+func getTitle():
 	pass
-	
+
 func getLevelList():
 	pass

@@ -5,7 +5,7 @@
 [ext_resource path="res://eftv-core/elements/camera/orthogonalCamera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://eftv-core/player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://eftv-core/elements/blocks/immobileGlass.tscn" type="PackedScene" id=5]
-[ext_resource path="res://eftv-core/elements/blocks/immobile.tscn" type="PackedScene" id=6]
+[ext_resource path="res://eftv-core/elements/blocks/Immobile.tscn" type="PackedScene" id=6]
 [ext_resource path="res://eftv-core/elements/sphere/sphereNextLevel.tscn" type="PackedScene" id=7]
 
 [node name="scene4" type="Spatial"]
@@ -85,5 +85,3 @@ transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, 46, 12, -25 )
 transform = Transform( 1.25, 0, 0, 0, 1, 0, 0, 0, 1.25, 0, 4, 0 )
 
 [connection signal="player_fall" from="player" to="." method="_on_player_player_fall"]
-
-[editable path="player"]

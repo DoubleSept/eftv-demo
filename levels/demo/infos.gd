@@ -5,10 +5,9 @@ func getTitle():
 
 func getLevelList():
 	return [
-	"scene-00-target-move.tscn",
-	"scene-00bis-target-jump.tscn",
-	"scene-01-move.tscn",
-
+	"00-target-move.tscn",
+	"00bis-target-jump.tscn",
+	"01-move.tscn",
 	"02-blocs_colores.tscn",
 	"04-transparent-simple.tscn",
 	"05-transparent-marguerite.tscn",

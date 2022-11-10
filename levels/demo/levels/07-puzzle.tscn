@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://eftv-core/scripts/emitFall.gd" type="Script" id=1]
 [ext_resource path="res://eftv-core/elements/camera/orthogonalCamera.tscn" type="PackedScene" id=2]
@@ -6,25 +6,33 @@
 [ext_resource path="res://eftv-core/scripts/blockMove/basicMovable.gd" type="Script" id=4]
 [ext_resource path="res://eftv-core/assets/textures/metal/Metal29_colGrey.jpg" type="Texture" id=5]
 [ext_resource path="res://eftv-core/assets/textures/metal/Metal29_met.jpg" type="Texture" id=6]
+[ext_resource path="res://eftv-core/assets/textures/metal/Metal29_nrm.jpg" type="Texture" id=7]
 [ext_resource path="res://eftv-core/assets/textures/metal/Metal29_rgh.jpg" type="Texture" id=8]
 [ext_resource path="res://eftv-core/assets/sounds/deny_sound.wav" type="AudioStream" id=9]
 [ext_resource path="res://eftv-core/elements/blocks/normal-sizeM.tscn" type="PackedScene" id=10]
 [ext_resource path="res://eftv-core/player/Player.tscn" type="PackedScene" id=11]
-[ext_resource path="res://eftv-core/elements/blocks/immobile.tscn" type="PackedScene" id=12]
+[ext_resource path="res://eftv-core/elements/blocks/Immobile.tscn" type="PackedScene" id=12]
 [ext_resource path="res://eftv-core/elements/sphere/sphereNextLevel.tscn" type="PackedScene" id=13]
 
 [sub_resource type="SpatialMaterial" id=8]
+flags_world_triplanar = true
+params_specular_mode = 3
 albedo_color = Color( 0, 0.498039, 1, 1 )
 albedo_texture = ExtResource( 5 )
-metallic = 0.4
+metallic = 0.98
 metallic_texture = ExtResource( 6 )
 metallic_texture_channel = 4
+roughness = 0.5
 roughness_texture = ExtResource( 8 )
 roughness_texture_channel = 4
+normal_enabled = true
+normal_scale = -1.0
+normal_texture = ExtResource( 7 )
 rim_enabled = true
 rim = 0.1
 rim_tint = 0.5
-uv1_scale = Vector3( 16, 32, 1 )
+uv1_scale = Vector3( 8, 8, 1 )
+uv1_triplanar = true
 
 [sub_resource type="CubeMesh" id=2]
 size = Vector3( 20, 4, 16 )

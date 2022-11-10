@@ -1,12 +1,25 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://eftv-core/assets/fonts/menuFont_headset.tres" type="DynamicFont" id=1]
 [ext_resource path="res://eftv-core/scripts/emitFall.gd" type="Script" id=2]
+[ext_resource path="res://eftv-core/scenes/menus/MainMenu/Font3D_Material.tres" type="Material" id=3]
 [ext_resource path="res://eftv-core/player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://eftv-core/elements/environments/environment-bluesky.tscn" type="PackedScene" id=5]
 [ext_resource path="res://eftv-core/elements/sphere/sphereNextLevel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://eftv-core/elements/camera/orthogonalCamera.tscn" type="PackedScene" id=7]
-[ext_resource path="res://eftv-core/elements/blocks/immobile.tscn" type="PackedScene" id=8]
+[ext_resource path="res://eftv-core/elements/blocks/Immobile.tscn" type="PackedScene" id=8]
+[ext_resource path="res://eftv-core/assets/fonts/barlow/BarlowCondensed-BoldItalic.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=2]
+size = 750
+font_data = ExtResource( 9 )
+
+[sub_resource type="TextMesh" id=3]
+material = ExtResource( 3 )
+text = "TEXT_DEMO_CONGRATS"
+font = SubResource( 2 )
+uppercase = true
+depth = 0.3
 
 [node name="scene0" type="Spatial"]
 script = ExtResource( 2 )
@@ -49,11 +62,15 @@ __meta__ = {
 }
 
 [node name="LabelJoystick" type="Label" parent="OnScreenContainer"]
-margin_right = 902.0
-margin_bottom = 118.0
+margin_right = 645.0
+margin_bottom = 96.0
 custom_fonts/font = ExtResource( 1 )
 text = "TEXT_DEMO_CONGRATS"
 align = 1
+
+[node name="text" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, -71.2735 )
+mesh = SubResource( 3 )
 
 [connection signal="player_fall" from="player" to="." method="_on_player_player_fall"]
 
