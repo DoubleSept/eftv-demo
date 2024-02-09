@@ -12,7 +12,12 @@ _global_script_classes=[ {
 "base": "KinematicBody",
 "class": "BasicMovable",
 "language": "GDScript",
-"path": "res://eftv-core/scripts/blockMove/basicMovable.gd"
+"path": "res://eftv-core/scripts/blockMove/BasicMovable.gd"
+}, {
+"base": "BasicMovable",
+"class": "DefaultBlock",
+"language": "GDScript",
+"path": "res://eftv-core/elements/blocks/DefaultBlock.gd"
 }, {
 "base": "ARVRController",
 "class": "EFTV_ControllerOLD",
@@ -34,7 +39,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://eftv-core/elements/blocks/StaticBlock.gd"
 }, {
-"base": "",
+"base": "Reference",
 "class": "SteamAPI",
 "language": "NativeScript",
 "path": "res://addons/steam_api/steam_api.gdns"
@@ -64,17 +69,17 @@ _global_script_classes=[ {
 "language": "NativeScript",
 "path": "res://addons/steam_api/steam_id.gdns"
 }, {
-"base": "",
+"base": "Reference",
 "class": "SteamLeaderboard",
 "language": "NativeScript",
 "path": "res://addons/steam_api/steam_leaderboard.gdns"
 }, {
-"base": "",
+"base": "Reference",
 "class": "SteamLeaderboardEntries",
 "language": "NativeScript",
 "path": "res://addons/steam_api/steam_leaderboard_entries.gdns"
 }, {
-"base": "",
+"base": "Reference",
 "class": "SteamLeaderboardEntry",
 "language": "NativeScript",
 "path": "res://addons/steam_api/steam_leaderboard_entry.gdns"
@@ -84,12 +89,12 @@ _global_script_classes=[ {
 "language": "NativeScript",
 "path": "res://addons/steam_api/steam_find_leaderboard_result.gdns"
 }, {
-"base": "",
+"base": "Reference",
 "class": "SteamLeaderboardScoreUploaded",
 "language": "NativeScript",
 "path": "res://addons/steam_api/steam_leaderboard_uploaded.gdns"
 }, {
-"base": "",
+"base": "Reference",
 "class": "SteamLeaderboardScoresDownloaded",
 "language": "NativeScript",
 "path": "res://addons/steam_api/steam_leaderboard_scores_downloaded.gdns"
@@ -104,13 +109,14 @@ _global_script_classes=[ {
 "language": "NativeScript",
 "path": "res://addons/steam_api/steam_user_stats.gdns"
 }, {
-"base": "",
+"base": "Reference",
 "class": "SteamUtils",
 "language": "NativeScript",
 "path": "res://addons/steam_api/steam_utils.gdns"
 } ]
 _global_script_class_icons={
 "BasicMovable": "",
+"DefaultBlock": "",
 "EFTV_ControllerOLD": "",
 "EftvPlayer": "",
 "RunInfos": "",
@@ -169,6 +175,10 @@ enabled=PoolStringArray( "res://addons/godot-openvr/plugin.cfg", "res://addons/s
 [gdnative]
 
 singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib" ]
+
+[global]
+
+rce=false
 
 [input]
 

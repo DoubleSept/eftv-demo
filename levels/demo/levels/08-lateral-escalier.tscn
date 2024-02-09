@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://eftv-core/scripts/emitFall.gd" type="Script" id=1]
 [ext_resource path="res://eftv-core/elements/environments/environment-bluesky.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://eftv-core/elements/camera/camera_environments/lateral.tres" type="Environment" id=4]
 [ext_resource path="res://eftv-core/player/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://eftv-core/elements/blocks/normal-sizeM.tscn" type="PackedScene" id=6]
-[ext_resource path="res://eftv-core/scripts/blockMove/LateralMovable.gd" type="Script" id=7]
 [ext_resource path="res://eftv-core/elements/blocks/Immobile.tscn" type="PackedScene" id=8]
 [ext_resource path="res://eftv-core/elements/sphere/sphereNextLevel.tscn" type="PackedScene" id=9]
 [ext_resource path="res://eftv-core/assets/3d_assets/platform_sharp.obj" type="ArrayMesh" id=10]
@@ -62,39 +61,21 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.189, 8 )
 
 [node name="veryHigh" parent="blocks" instance=ExtResource( 6 )]
 transform = Transform( 0.75, 0, 0, 0, -4.37114e-08, -1.5, 0, 1, -6.55671e-08, 0, 26.1, -1 )
-script = ExtResource( 7 )
-mesh_color = Color( 0, 0.5, 1, 1 )
-max_speed = 20
 
 [node name="step1" parent="blocks" instance=ExtResource( 6 )]
 transform = Transform( 0.75, 0, 0, 0, -4.37114e-08, -0.24, 0, 1, -1.04907e-08, 0, 15.9869, -18 )
-script = ExtResource( 7 )
-mesh_color = Color( 0, 0.5, 1, 1 )
-max_speed = 20
 
 [node name="step2" parent="blocks" instance=ExtResource( 6 )]
 transform = Transform( 0.75, 0, 0, 0, -4.37114e-08, -0.24, 0, 1, -1.04907e-08, 0, 15.9869, -23 )
-script = ExtResource( 7 )
-mesh_color = Color( 0, 0.5, 1, 1 )
-max_speed = 20
 
 [node name="step3" parent="blocks" instance=ExtResource( 6 )]
 transform = Transform( 0.75, 0, 0, 0, -4.37114e-08, -0.24, 0, 1, -1.04907e-08, 0, 15.9869, -28 )
-script = ExtResource( 7 )
-mesh_color = Color( 0, 0.5, 1, 1 )
-max_speed = 20
 
 [node name="step4" parent="blocks" instance=ExtResource( 6 )]
 transform = Transform( 0.75, 0, 0, 0, -4.37114e-08, -0.24, 0, 1, -1.04907e-08, 0, 15.9869, -33 )
-script = ExtResource( 7 )
-mesh_color = Color( 0, 0.5, 1, 1 )
-max_speed = 20
 
 [node name="step5" parent="blocks" instance=ExtResource( 6 )]
 transform = Transform( 0.75, 0, 0, 0, -4.37114e-08, -0.24, 0, 1, -1.04907e-08, 0, 15.9869, -38 )
-script = ExtResource( 7 )
-mesh_color = Color( 0, 0.5, 1, 1 )
-max_speed = 20
 
 [node name="platforms" type="Spatial" parent="."]
 

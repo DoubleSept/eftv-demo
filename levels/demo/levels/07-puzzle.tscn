@@ -17,7 +17,7 @@
 [sub_resource type="SpatialMaterial" id=8]
 flags_world_triplanar = true
 params_specular_mode = 3
-albedo_color = Color( 0, 0.498039, 1, 1 )
+albedo_color = Color( 0, 0.5, 1, 1 )
 albedo_texture = ExtResource( 5 )
 metallic = 0.98
 metallic_texture = ExtResource( 6 )
@@ -72,7 +72,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2.45, 0, 32, -28 )
 collision_layer = 3
 collision_mask = 3
 script = ExtResource( 4 )
-mesh_color = Color( 0, 0.498039, 1, 1 )
 max_speed = 20
 
 [node name="mesh" type="MeshInstance" parent="movableContainer"]
@@ -121,27 +120,22 @@ stream = ExtResource( 9 )
 [node name="movableStepBig" parent="insideBlocks" instance=ExtResource( 10 )]
 transform = Transform( 0.7, 0, 0, 0, 3.88, 0, 0, 0, 0.4, 0, 22, -14.3125 )
 mesh_color = Color( 0.498039, 1, 0, 1 )
-max_speed = 20
 
 [node name="movableStepMedium" parent="insideBlocks" instance=ExtResource( 10 )]
 transform = Transform( 0.7, 0, 0, 0, 3.1, 0, 0, 0, 0.4, 0, 20.4396, -28.3203 )
 mesh_color = Color( 0.498039, 1, 0, 1 )
-max_speed = 20
 
 [node name="movableStepMedium2" parent="insideBlocks" instance=ExtResource( 10 )]
 transform = Transform( 0.7, 0, 0, 0, 2.4, 0, 0, 0, 0.4, 0, 19.0474, -21.3203 )
 mesh_color = Color( 1, 0.498039, 0, 1 )
-max_speed = 20
 
 [node name="movableStepLittle1" parent="insideBlocks" instance=ExtResource( 10 )]
 transform = Transform( 0.7, 0, 0, 0, 0.8, 0, 0, 0, 0.4, 0, 15.8368, -35.4644 )
 mesh_color = Color( 1, 0.498039, 0, 1 )
-max_speed = 20
 
 [node name="movableStepLittle2" parent="insideBlocks" instance=ExtResource( 10 )]
 transform = Transform( 0.7, 0, 0, 0, 1.6, 0, 0, 0, 0.4, 0, 17.3863, -42.4644 )
 mesh_color = Color( 0.498039, 1, 0, 1 )
-max_speed = 20
 
 [node name="fixe" type="Spatial" parent="."]
 
@@ -158,4 +152,3 @@ transform = Transform( 0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, 36.5, -54 )
 transform = Transform( 1.25, 0, 0, 0, 1, 0, 0, 0, 1.25, 0, 4.0375, 0 )
 
 [connection signal="finished" from="movableContainer/denySound" to="movableContainer" method="_on_denySound_finished"]
-[connection signal="player_fall" from="fixe/player" to="." method="_on_player_player_fall"]
